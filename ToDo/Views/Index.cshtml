@@ -1,0 +1,25 @@
+﻿@{
+    PageData["title"] = "AngularJS SPA Template for Visual Studio";
+}
+<h2>Welcome!</h2>
+<p>This is just a demo page.</p>
+
+<form>
+    <input type="text" ng-model="cityName" value="Seattle" />
+    <input type="submit" value="Check weather!" ng-click="lookupForecast(cityName)" />
+</form>
+
+<br /><br />
+<table style="width:100%" align="center" ng-init="lookupForecast(cityName)">
+    <tr>
+        <td>ID</td>
+        <td>Forecast</td>
+        <td>Description</td>
+    </tr>
+    <tr ng-repeat="obj in weatherList">
+        <td>{{obj.weather[0].id}}</td>
+        <td>{{obj.weather[0].main}}</td>
+        <td>{{obj.weather[0].description}}</td>
+    </tr>
+</table>
+</div>
